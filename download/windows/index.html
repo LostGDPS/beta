@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="style.css"/>
+<main>
+Please wait.<br/>
+The download will start soon.<br/>
+If not, <a data-auto-download href="LostGDPS.zip">Click Here</a>
+</main>
+
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+$(function() {
+	$('a[data-auto-download]').each(function(){
+		var $this = $(this);
+		setTimeout(function() {
+			window.location = $this.attr('href');
+		}, 1000);
+	});
+});
+</script>
