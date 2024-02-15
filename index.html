@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/index.css"/>
+		<title>LostGDPS</title>
+	</head>
+	<body>
+		<main>
+			<h1>LOSTGDPS</h1>
+			<h2>DOWNLOADS</h2>
+			<table> 
+			<!-- Table is there, to align the links next to each other-->
+			<tr>
+				<th>
+					<a href="download/windows/">
+						<img src="res/windows.png"/>
+						<div>Windows</div>
+					</a>
+				</th>
+				<th>
+					<a href="download/android/">
+						<img src="res/android.png"/>
+						<div>Android</div>
+					</a>
+				</th>
+			</tr>
+			</table>
+			<h2>DISCORD</h2>
+			<table><tr><th>
+				<a href="https://discord.com/invite/yzpPvBNbzp">
+					<img src="res/icon.png"/>
+					<div>LostGDPS Server</div>
+				</a>
+			</th></tr></table>
+			
+			<h2>NEWS</h2>
+			<article id="news">
+				<h3>News Loading...</h3>
+			</article>
+		</main>
+	</body>
+</html>
+
+<script>
+var newsHeight= 18;
+var news = document.getElementById("news");
+/*
+	Title: *Title/*
+	Split: --
+	Normal Text: Normal Text
+(For title, dont forget the /* at the end)
+*/
+var newsString = `
+*NEW WEBSITE/*
+The website has now been updated to look modern!
+----
+*2.2 UPDATE/*
+The GDPS has been updated to 2.2!
+`
+
+var newsFormatted = newsString.replaceAll("/*", "</h3>");
+newsFormatted = newsFormatted.replaceAll("*", "<h3>");
+newsFormatted = newsFormatted.replaceAll("----", `<div class="split"\>`);
+news.innerHTML = newsFormatted;
+news.style.height = newsHeight+"vw";
+</script>
+
