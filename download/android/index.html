@@ -1,1 +1,18 @@
-<p>Ahh. So you have an android. I love the sound of robots being crushed you know. But being he darkness, I can't ever get my hands on any. I'm too busy f****ng LostShadow and his stupid GDPS.</p>
+<link rel="stylesheet" href="style.css"/>
+<main>
+Please wait.<br/>
+The download will start soon.<br/>
+If not, <a data-auto-download href="LostGDPS.apk">Click Here</a>
+</main>
+
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+$(function() {
+	$('a[data-auto-download]').each(function(){
+		var $this = $(this);
+		setTimeout(function() {
+			window.location = $this.attr('href');
+		}, 1000);
+	});
+});
+</script>
